@@ -174,3 +174,7 @@ a{color:inherit}
 @media (max-width:760px){.google-box{grid-template-columns:1fr}}
 .google .btn{background:#d9bd7c;border-color:#d9bd7c;color:#22332a}
 .google .btn:hover{background:#e8cf91;border-color:#e8cf91}
+
+/* foto chiara in copertina: ombra più decisa a sinistra e in basso per leggere il testo */
+.hero-shade{background:linear-gradient(90deg,rgba(15,30,20,.78) 0%,rgba(15,30,20,.5) 50%,rgba(15,30,20,.25) 100%),linear-gradient(180deg,rgba(15,30,20,.1) 40%,rgba(15,30,20,.6) 100%)}
+.hero-img{object-position:center 55%}

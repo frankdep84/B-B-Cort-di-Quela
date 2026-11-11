@@ -13,6 +13,7 @@ Write-Host "Trovate $($paths.Count) foto"
 
 foreach ($p in $paths) {
   $f = Join-Path 'img' ([IO.Path]::GetFileName($p))
+  if ($p -match '/5/') { $f = Join-Path 'img' ('cover-' + [IO.Path]::GetFileName($p)) }
   if (-not (Test-Path $f)) {
     Invoke-WebRequest -UseBasicParsing -UserAgent $ua "$cdn/$p" -OutFile $f
     Write-Host "ok $f"
@@ -20,10 +21,11 @@ foreach ($p in $paths) {
 }
 
 Invoke-WebRequest -UseBasicParsing -UserAgent $ua 'https://www.topbnb.it/img/banner/topbb-quadrato-1.png' -OutFile 'img\topbnb.png'
+$cdnEsc = [regex]::Escape("$cdn/fotobbit/39867/5/39867.jpg")
 # Punta index.html alle copie locali (og:image e JSON-LD restano assoluti)
 $pattern = [regex]::Escape("$cdn/fotobbit/39867/") + '[45]/'
 $lines = Get-Content index.html -Encoding UTF8 | ForEach-Object {
-  if ($_ -match 'og:image|@context') { $_ } else { $_ -replace $pattern, 'img/' }
+  if ($_ -match 'og:image|@context') { $_ } else { ($_ -replace $cdnEsc, 'img/cover-39867.jpg') -replace $pattern, 'img/' }
 }
 $lines = $lines | ForEach-Object { $_ -replace [regex]::Escape('https://www.topbnb.it/img/banner/topbb-quadrato-1.png'), 'img/topbnb.png' }
 [IO.File]::WriteAllLines((Resolve-Path index.html), $lines, (New-Object Text.UTF8Encoding($false)))
