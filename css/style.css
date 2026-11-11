@@ -159,3 +159,18 @@ a{color:inherit}
 @keyframes grow{from{transform:scaleX(0)}}
 .score-src{margin:1.4rem 0 0;font-size:.82rem;color:var(--muted);text-align:center}
 @media (max-width:640px){.sources{grid-template-columns:1fr}.crits{grid-template-columns:1fr}}
+
+.google{background:var(--ink);color:#fff}
+.google-box{display:grid;grid-template-columns:auto 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.google .eyebrow{color:#d9bd7c}
+.g-num{display:flex;align-items:baseline;gap:.5rem}
+.g-num b{font:600 clamp(4rem,10vw,6rem)/1 Fraunces,Georgia,serif}
+.g-num span{opacity:.8}
+.google .stars{font-size:1.4rem;margin-top:.3rem}
+.g-count{margin:.2rem 0 0;opacity:.85}
+.g-text h2{color:#fff}
+.g-text p{max-width:36em}
+.google .note{color:#b9c5bb}
+@media (max-width:760px){.google-box{grid-template-columns:1fr}}
+.google .btn{background:#d9bd7c;border-color:#d9bd7c;color:#22332a}
+.google .btn:hover{background:#e8cf91;border-color:#e8cf91}
