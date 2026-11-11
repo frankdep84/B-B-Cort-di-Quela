@@ -12,6 +12,8 @@ while read -r p; do
   f="img/$(basename "$p")"
   [ -f "$f" ] || curl -fsSL -A "Mozilla/5.0" "$CDN/$p" -o "$f" && echo "ok $f"
 done < /tmp/foto.txt
+curl -fsSL -A "Mozilla/5.0" https://www.topbnb.it/img/banner/topbb-quadrato-1.png -o img/topbnb.png && echo "ok img/topbnb.png"
+sed -i.bak "s#https://www.topbnb.it/img/banner/topbb-quadrato-1.png#img/topbnb.png#" index.html && rm -f index.html.bak
 # punta index.html alle copie locali (og:image e JSON-LD restano assoluti)
 sed -i.bak "/og:image\|@context/!s#$CDN/fotobbit/39867/[45]/#img/#g" index.html && rm -f index.html.bak
 echo "Fatto. Controlla con: ls -lh img/"

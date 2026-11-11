@@ -126,3 +126,17 @@ a{color:inherit}
 .split-fig img{aspect-ratio:5/4}
 @media (max-width:900px){.split-fig img{aspect-ratio:4/3}}
 .hero-img{object-position:center 45%}
+
+.certs{list-style:none;padding:0;margin:2rem auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,270px));gap:1.2rem;justify-content:center}
+.cert{aspect-ratio:1;border-radius:18px;padding:1.4rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.35rem;overflow:hidden;box-shadow:0 14px 30px -20px rgba(34,51,42,.6)}
+.cert p{margin:0;font-size:.9rem}
+.cert-cin{background:#fff;border:1px solid var(--line)}
+.cert-cin h3{font-size:1.25rem;color:var(--accent);margin-top:.5rem}
+.cert-cin strong{font-family:Fraunces,Georgia,serif;font-size:1.15rem}
+.cert code{font-size:.72rem;color:var(--muted);word-break:break-all}
+.cert-ex{background:var(--accent);color:#fff}
+.seal{width:96px;height:96px;border-radius:50%;background:#f6efd2;color:var(--ink);border:4px solid #d9bd7c;outline:2px solid rgba(255,255,255,.5);outline-offset:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:.7rem 0}
+.seal b{font:600 2rem/1 Fraunces,serif}.seal small{font-size:.7rem}
+.cert-ex span{font-size:.8rem;opacity:.85}
+.cert-top{padding:0}.cert-top a,.cert-top img{display:block;width:100%;height:100%}.cert-top img{object-fit:cover}
+@media (max-width:760px){.certs{grid-template-columns:minmax(0,300px)}}
