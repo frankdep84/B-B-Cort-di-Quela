@@ -111,7 +111,7 @@ a{color:inherit}
 .gallery button img{aspect-ratio:1}
 .foot{display:flex;align-items:center;gap:1.2rem}
 .foot img{border-radius:50%;background:#faf7ee}
-.hero-img{object-position:center 60%}
+.hero-img{object-position:72% center}
 .hero .eyebrow{color:#e8cf91}
 
 .brand{display:flex;align-items:center;gap:.7rem;font-size:1.3rem}
@@ -123,3 +123,16 @@ a{color:inherit}
 .tile svg{width:28px;height:28px;color:var(--accent);fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 @media (max-width:900px){.tiles{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:560px){.tiles{grid-template-columns:repeat(2,1fr)}.brand{font-size:1.1rem}.logo{width:44px;height:44px}}
+.split-fig img{aspect-ratio:5/4}
+@media (max-width:900px){.split-fig img{aspect-ratio:4/3}}
+/* copertina illustrata: ombra leggera solo dove c'è il testo */
+.hero-shade{background:linear-gradient(90deg,rgba(14,30,20,.72) 0%,rgba(14,30,20,.45) 42%,rgba(14,30,20,0) 72%),linear-gradient(180deg,rgba(14,30,20,0) 55%,rgba(14,30,20,.55) 100%)}
+.hero-content>*{max-width:620px}
+.hero h1{font-size:clamp(2rem,4.6vw,3.5rem)}
+@media (max-width:700px){
+  .hero{background:#1b3526;min-height:auto;display:block}
+  .hero-img{bottom:auto;height:340px;object-position:74% center}
+  .hero-shade{background:linear-gradient(180deg,rgba(27,53,38,0) 40%,#1b3526 340px)}
+  .hero-content{padding:300px 0 3rem}
+  .hero-content>*{max-width:none}
+}
