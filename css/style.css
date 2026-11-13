@@ -178,3 +178,12 @@ a{color:inherit}
 /* foto chiara in copertina: ombra più decisa a sinistra e in basso per leggere il testo */
 .hero-shade{background:linear-gradient(90deg,rgba(15,30,20,.78) 0%,rgba(15,30,20,.5) 50%,rgba(15,30,20,.25) 100%),linear-gradient(180deg,rgba(15,30,20,.1) 40%,rgba(15,30,20,.6) 100%)}
 .hero-img{object-position:center 55%}
+
+/* Hero: la foto è verticale, su desktop sta a destra a tutta altezza */
+.hero-img{object-position:center 45%}
+@media (min-width:900px){
+  .hero{background:var(--ink,#22332a)}
+  .hero-img{left:auto;right:0;width:50%;object-position:center 60%}
+  .hero-shade{background:linear-gradient(90deg,#22332a 0%,#22332a 50%,rgba(34,51,42,0) 62%),linear-gradient(180deg,rgba(15,30,20,0) 60%,rgba(15,30,20,.45) 100%)}
+  .hero-content{padding-right:50%}
+}
