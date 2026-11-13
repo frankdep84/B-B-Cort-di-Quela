@@ -253,3 +253,15 @@ a{color:inherit}
 }
 .review-head .eyebrow{min-height:2.7em;display:flex;align-items:flex-end;justify-content:center;text-align:center;line-height:1.35}
 .review-head .g-score{align-self:center}
+
+/* Testata recensioni a tutta larghezza: punteggi ai margini, titolo su una riga */
+@media (min-width:761px){
+  .review-head{max-width:none;grid-template-columns:1fr auto 1fr}
+  .review-head .gs-left{justify-self:start;text-align:left}
+  .review-head .gs-right{justify-self:end;text-align:right}
+  .review-head .gs-left .eyebrow,.review-head .gs-left .g-num{justify-content:flex-start}
+  .review-head .gs-right .eyebrow,.review-head .gs-right .g-num{justify-content:flex-end}
+  .review-head .gs-right .eyebrow{text-align:right}
+  .review-title p{max-width:28em}
+}
+@media (min-width:1100px){.review-title h2{white-space:nowrap}}
