@@ -179,13 +179,10 @@ a{color:inherit}
 .hero-shade{background:linear-gradient(90deg,rgba(15,30,20,.78) 0%,rgba(15,30,20,.5) 50%,rgba(15,30,20,.25) 100%),linear-gradient(180deg,rgba(15,30,20,.1) 40%,rgba(15,30,20,.6) 100%)}
 .hero-img{object-position:center 55%}
 
-/* Hero: la foto è verticale, su desktop sta a destra a tutta altezza */
-.hero-img{object-position:center 45%}
+/* Hero: foto a tutto schermo con il testo sopra */
+.hero{min-height:min(78vh,680px)}
+.hero picture{display:contents}
+.hero-img{object-position:center 55%}
 @media (min-width:900px){
-  .hero{background:var(--ink,#22332a);min-height:min(74vh,620px)}
-  .hero-img{left:auto;right:0;width:42%;object-position:center 62%}
-  .hero-shade{background:linear-gradient(90deg,#22332a 0%,#22332a 58%,rgba(34,51,42,0) 70%)}
-  .hero-content{padding-top:3rem;padding-bottom:3rem}
-  .hero-content h1{font-size:clamp(2rem,3.3vw,2.9rem);max-width:none}
-  .hero-content .lead{max-width:34rem}
+  .hero-shade{background:linear-gradient(90deg,rgba(15,30,20,.82) 0%,rgba(15,30,20,.55) 42%,rgba(15,30,20,.12) 100%),linear-gradient(180deg,rgba(15,30,20,0) 55%,rgba(15,30,20,.45) 100%)}
 }
