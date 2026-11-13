@@ -184,5 +184,6 @@ a{color:inherit}
 .hero picture{display:contents}
 .hero-img{object-position:center 55%}
 @media (min-width:900px){
+  .hero-img{object-position:center 60%}
   .hero-shade{background:linear-gradient(90deg,rgba(15,30,20,.82) 0%,rgba(15,30,20,.55) 42%,rgba(15,30,20,.12) 100%),linear-gradient(180deg,rgba(15,30,20,0) 55%,rgba(15,30,20,.45) 100%)}
 }
