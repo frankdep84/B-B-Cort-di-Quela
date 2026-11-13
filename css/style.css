@@ -207,7 +207,8 @@ a{color:inherit}
 .foot-links a{color:#e8cf91}
 .prose h3{font-size:1.05rem;margin:1.4rem 0 .3rem}
 
-.g-cta{margin-top:1.4rem;justify-content:center}
+.g-cta{margin-top:1.6rem;display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center}
+.g-cta p{margin:0;max-width:34em}
 .nw{white-space:nowrap}
 .stars{color:#f2b01e;letter-spacing:.12em;font-size:1rem}
 
