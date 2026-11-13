@@ -1,3 +1,5 @@
+@font-face{font-family:Fraunces;font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/fraunces-latin.woff2) format("woff2")}
+@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/inter-latin.woff2) format("woff2")}
 :root{--bg:#faf7ee;--alt:#f0ead6;--ink:#22332a;--muted:#5c6b60;--accent:#36663f;--accent-d:#28502f;--line:#ddd5bc;--r:14px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
@@ -211,3 +213,18 @@ a{color:inherit}
 .g-who{display:flex;flex-direction:column;line-height:1.3}
 .g-who b{font-size:1rem}
 .g-who span{font-size:.84rem;color:var(--muted)}
+
+/* Mappa su richiesta */
+.map-ph{min-height:420px;height:100%;border-radius:var(--r);background:var(--alt);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem}
+.map-ph p{margin:0;max-width:26em;color:var(--muted);font-size:.95rem}
+.map-ph a{font-size:.95rem;color:var(--accent);font-weight:600}
+/* Pagina privacy */
+.prose{max-width:46rem;padding:3rem 0 4rem}
+.prose h1{font-size:clamp(2rem,5vw,2.8rem);margin-bottom:.4em}
+.prose h2{font-size:1.4rem;margin:2.2rem 0 .6rem}
+.prose p,.prose li{max-width:none}
+.prose ul{padding-left:1.2rem}
+.prose .upd{color:var(--muted);font-size:.92rem}
+.foot-links{margin-top:.6rem}
+.foot-links a{color:#e8cf91}
+.prose h3{font-size:1.05rem;margin:1.4rem 0 .3rem}

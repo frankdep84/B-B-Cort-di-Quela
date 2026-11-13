@@ -30,3 +30,15 @@
   if(p) p.addEventListener('click',function(){go(-1)});
   if(n) n.addEventListener('click',function(){go(1)});
 })();
+
+(function(){
+  var btn=document.getElementById('load-map'),box=document.getElementById('map');
+  if(!btn||!box) return;
+  btn.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.title='Mappa di Cort di Quèla';
+    f.referrerPolicy='no-referrer-when-downgrade';
+    f.src='https://maps.google.com/maps?q=Via+Alessandro+Manzoni+7,+20021+Baranzate+MI&z=15&output=embed';
+    box.replaceChildren(f);
+  });
+})();
