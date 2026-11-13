@@ -237,3 +237,19 @@ a{color:inherit}
 .g-intro{max-width:36em;margin:.6rem 0 0}
 .big-scores{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);margin:clamp(1.6rem,3vw,2.4rem) 0}
 @media (max-width:760px){.big-scores{grid-template-columns:1fr;gap:1.8rem}}
+
+/* Testata recensioni: simmetrica e allineata alla scheda */
+.review-head{max-width:860px;margin:0 auto clamp(1.6rem,3vw,2.4rem);display:grid;grid-template-columns:1fr minmax(0,1.15fr) 1fr;grid-template-areas:"l t r";gap:1.5rem;align-items:center;text-align:center}
+.review-head .gs-left{grid-area:l}.review-head .review-title{grid-area:t}.review-head .gs-right{grid-area:r}
+.review-head .g-num{justify-content:center}
+.review-head .g-num b{font-size:clamp(3.2rem,8vw,5.2rem)}
+.review-head .eyebrow{margin-bottom:.4rem}
+.review-title h2{margin:0}
+.review-title p{margin:.7rem auto 0;max-width:22em;font-size:.95rem}
+@media (max-width:760px){
+  .review-head{grid-template-columns:1fr 1fr;grid-template-areas:"t t" "l r";gap:1.6rem 1rem}
+  .review-head .eyebrow{font-size:.68rem}
+  .review-head .g-num b{font-size:clamp(3rem,15vw,4rem)}
+}
+.review-head .eyebrow{min-height:2.7em;display:flex;align-items:flex-end;justify-content:center;text-align:center;line-height:1.35}
+.review-head .g-score{align-self:center}
