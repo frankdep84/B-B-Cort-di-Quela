@@ -145,7 +145,7 @@ a{color:inherit}
 
 .score-card{max-width:860px;margin:2rem auto 0;background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(1.2rem,3vw,2rem);box-shadow:0 14px 30px -22px rgba(34,51,42,.6)}
 .score-card h3{font-size:1.2rem;margin-bottom:1.1rem}
-.sources{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+.sources{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
 .src{border:1px solid var(--line);border-radius:12px;padding:1rem .8rem;text-align:center;display:flex;flex-direction:column;gap:.25rem;align-items:center}
 .src strong{font-size:.95rem}
 .src p{margin:0}.src b{font-size:1.15rem}.src span{color:var(--muted);font-size:.88rem}
@@ -163,17 +163,8 @@ a{color:inherit}
 @media (max-width:640px){.sources{grid-template-columns:1fr}.crits{grid-template-columns:1fr}}
 
 .google{background:var(--ink);color:#fff}
-.google-box{display:grid;grid-template-columns:auto 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
 .google .eyebrow{color:#d9bd7c}
-.g-num{display:flex;align-items:baseline;gap:.5rem}
-.g-num b{font:600 clamp(4rem,10vw,6rem)/1 Fraunces,Georgia,serif}
-.g-num span{opacity:.8}
-.google .stars{font-size:1.4rem;margin-top:.3rem}
-.g-count{margin:.2rem 0 0;opacity:.85}
-.g-text h2{color:#fff}
-.g-text p{max-width:36em}
-.google .note{color:#b9c5bb}
-@media (max-width:760px){.google-box{grid-template-columns:1fr}}
+.google h2{color:#fff}
 .google .btn{background:#d9bd7c;border-color:#d9bd7c;color:#22332a}
 .google .btn:hover{background:#e8cf91;border-color:#e8cf91}
 
@@ -229,3 +220,6 @@ a{color:inherit}
 .foot-links{margin-top:.6rem}
 .foot-links a{color:#e8cf91}
 .prose h3{font-size:1.05rem;margin:1.4rem 0 .3rem}
+
+.google .score-card{color:var(--ink);margin-bottom:0}
+.g-cta{margin-top:1.4rem;justify-content:center}
