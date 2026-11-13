@@ -187,3 +187,22 @@ a{color:inherit}
   .hero-img{object-position:center 60%}
   .hero-shade{background:linear-gradient(90deg,rgba(15,30,20,.82) 0%,rgba(15,30,20,.55) 42%,rgba(15,30,20,.12) 100%),linear-gradient(180deg,rgba(15,30,20,0) 55%,rgba(15,30,20,.45) 100%)}
 }
+
+/* Recensioni Google: card scorrevoli */
+.g-cards{margin-top:clamp(2rem,4vw,3rem)}
+.g-reviews{list-style:none;margin:0;padding:.4rem .2rem 1.1rem;display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-color:#d9bd7c rgba(255,255,255,.12)}
+.g-reviews:focus-visible{outline:2px solid #d9bd7c;outline-offset:4px;border-radius:var(--r)}
+.g-card{flex:0 0 min(360px,86vw);scroll-snap-align:start;background:var(--bg);color:var(--ink);border-radius:var(--r);padding:1.4rem 1.4rem 1.2rem;display:flex;flex-direction:column;gap:.7rem}
+.g-card .stars{font-size:1.05rem;margin:0}
+.g-card blockquote{margin:0;flex:1}
+.g-card blockquote p{margin:0;max-width:none;font-size:.98rem;line-height:1.6}
+.g-more{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.g-more:hover{color:var(--accent-d)}
+.g-author{margin:0;font-size:.9rem;color:var(--muted)}
+.g-author b{color:var(--ink)}
+.g-author span{opacity:.85}
+@media (min-width:1100px){.g-card{flex-basis:calc((100% - 2.2rem)/3)}}
+.g-nav{display:flex;justify-content:flex-end;gap:.5rem;margin-bottom:.8rem}
+.g-nav button{width:2.6rem;height:2.6rem;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;font-size:1.2rem;cursor:pointer;transition:.2s}
+.g-nav button:hover{background:#d9bd7c;border-color:#d9bd7c;color:var(--ink)}
+.g-nav button:focus-visible{outline:2px solid #d9bd7c;outline-offset:3px}

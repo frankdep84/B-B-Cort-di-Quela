@@ -16,3 +16,17 @@
   var sc=document.querySelector('.sticky-cta'),c=document.getElementById('contatti');
   if('IntersectionObserver' in window){new IntersectionObserver(function(en){sc.style.display=en[0].isIntersecting?'none':''},{threshold:.2}).observe(c)}
 })();
+
+(function(){
+  var list=document.querySelector('.g-reviews');
+  if(!list) return;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(d){
+    var card=list.querySelector('.g-card');
+    var step=card?card.getBoundingClientRect().width+17:320;
+    list.scrollBy({left:d*step,behavior:reduce?'auto':'smooth'});
+  }
+  var p=document.querySelector('.g-prev'),n=document.querySelector('.g-next');
+  if(p) p.addEventListener('click',function(){go(-1)});
+  if(n) n.addEventListener('click',function(){go(1)});
+})();
