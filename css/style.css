@@ -215,9 +215,10 @@ a{color:inherit}
 .g-who span{font-size:.84rem;color:var(--muted)}
 
 /* Mappa su richiesta */
-.map-ph{min-height:420px;height:100%;border-radius:var(--r);background:var(--alt);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem}
-.map-ph p{margin:0;max-width:26em;color:var(--muted);font-size:.95rem}
-.map-ph a{font-size:.95rem;color:var(--accent);font-weight:600}
+.map-ph{position:relative;min-height:420px;height:100%;border-radius:var(--r);background:#efe9d3 url(../img/mappa-stilizzata.svg) center/cover;border:1px solid var(--line);display:flex;align-items:flex-end;justify-content:center;padding:1rem;overflow:hidden}
+.map-card{background:rgba(250,247,238,.95);border-radius:var(--r);padding:1rem 1.2rem;max-width:30rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.6rem;box-shadow:0 6px 24px rgba(34,51,42,.15)}
+.map-card p{margin:0;color:var(--muted);font-size:.85rem}
+.map-card a{font-size:.9rem;color:var(--accent);font-weight:600}
 /* Pagina privacy */
 .prose{max-width:46rem;padding:3rem 0 4rem}
 .prose h1{font-size:clamp(2rem,5vw,2.8rem);margin-bottom:.4em}
